@@ -1,3 +1,3 @@
 # CalculadoraGamer
 
-##Calculadora feita em html,css e nodejs
+### Calculadora feita em html5,css3 e nodejs
