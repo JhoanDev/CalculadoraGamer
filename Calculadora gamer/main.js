@@ -6,7 +6,7 @@ var resultado = ''
 var qnt = 0
 var op = []
 var opi = 0
-
+var c = 0
 
 function reset() {
     vetornum = []
@@ -17,21 +17,40 @@ function reset() {
     passnumbers = ''
     posnumbers = ''
     opi = 0 
+    c = 0
 }
 
 function number(x) {
     let n = x
     if (vetornum.length < 15) {
-        vetornum.push(n)
-        res.innerHTML = vetornum.join('')
+        if ((typeof(n) == 'string') && (typeof(vetornum[(vetornum.length - 1)]) == 'string')) {
+            window.alert('[ERRO] Não coloque duas operações/strings juntas!')
+        }
+        else{        
+            if (typeof(n) == 'string' && n != '.') {
+            c++
+            }
+            if (c<2) {
+                vetornum.push(n)
+                res.innerHTML = vetornum.join('')
+            }
+            else{
+                result()
+            }  
+        }
     }
     else{
         window.alert('[ERRO] Número maximo de digitos atingido (15)')
     }
 }
 function negativo() {
-    vetornum[(vetornum.length - 1)] = -vetornum[(vetornum.length - 1)]
-    res.innerHTML = vetornum.join('')
+    if (typeof(vetornum[(vetornum.length - 1)]) == 'string') {
+        window.alert('[ERRO] O ultimo digito não é um número')
+    }
+    else{
+        vetornum[(vetornum.length - 1)] = -vetornum[(vetornum.length - 1)]
+        res.innerHTML = vetornum.join('')
+    }
 }
 
 function result() {
@@ -102,10 +121,10 @@ function result() {
                         resultado = passnumbers + posnumbers
                         opi += 1
                     }
-                    window.alert(`pass: ${passnumbers} pos:${posnumbers} vetor: ${vetornum}`)
                     passnumbers = ''
                     posnumbers = ''
                     qnt = 0
+                    c = 0
                 }
                 break;
             }
