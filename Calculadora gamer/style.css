@@ -1,0 +1,80 @@
+header{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+body{
+    background-color: rgb(35, 0, 80);
+    font: normal 1.15em arial;
+}
+
+section{
+    background-color:  rgb(124, 124, 124);
+    border-radius: 1em;
+    width: 15em;
+    height: 20em;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border: 0.2rem solid rgb(10, 10, 10);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.582);
+}
+
+.res{
+    font-size: 25px;
+    position: relative;
+    left: 0.3em;
+    top: 0.25em;
+    border: 0.2rem solid rgb(0, 0, 0);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em ;
+    width: 8.27em;
+    height: 2em;
+    display: flex;
+    padding: 1em;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    background-color:  rgb(24, 25, 26);
+}
+
+.buttonline{
+    position: relative;
+    width: 15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 1em;
+}
+
+.button{
+    background-color:  rgba(31, 29, 29, 0.849);    
+    position: relative;
+    width: 4.9em;
+    height: 3.5em;
+    border-radius: 0.5em;
+    color: white;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color:  rgba(63, 61, 61, 0.849);    
+}
+
+button#igual{
+    width: 9.8em;
+    background-color: rgb(0, 88, 77, 0.849);
+}
+button#igual:hover{
+    
+    background-color: rgba(7, 122, 109, 0.849);
+}
+footer{
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+}

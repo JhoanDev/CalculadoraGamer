@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div class="res" id="res"> 0 </div>
+        <div class="buttonline">
+            <button class="button" onclick="reset()">C</button><button class="button" onclick="negativo()">±</button><button class="button" onclick="number('^')">^</button><button class="button" onclick="number('/')">/</button>
+        </div> 
+        <div class="buttonline">
+            <button class="button" onclick="number(7)">7</button><button class="button" onclick="number(8)">8</button><button class="button" onclick="number(9)">9</button><button class="button" onclick="number('*')">*</button>
+        </div> 
+        <div class="buttonline">
+            <button class="button" onclick="number(4)">4</button><button class="button" onclick="number(5)">5</button><button class="button" onclick="number(6)">6</button><button class="button" onclick="number('-')">-</button>
+        </div>
+        <div class="buttonline">
+            <button class="button" onclick="number(1)">1</button><button class="button" onclick="number(2)">2</button><button class="button" onclick="number(3)">3</button><button class="button" onclick="number('+')">+</button>
+        </div>
+        <div class="buttonline">
+            <button class="button" onclick="number(0)">0</button><button class="button" onclick="number('.')">.</button><button class="button" id="igual" onclick="result()">=</button>
+        </div>
+    </section>
+    <footer>
+        <P>&copy; JhoanDev</P>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
