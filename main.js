@@ -31,7 +31,7 @@ function number(x) {
         reset()
     }
     else{
-        if (vetornum.length < 15) {
+        if (vetornum.length < 12) {
             if ((typeof(n) == 'string') && (typeof(vetornum[(vetornum.length - 1)]) == 'string')) {
                 window.alert('[ERRO] Não coloque duas operações/strings juntas!')
             }
@@ -49,7 +49,7 @@ function number(x) {
             }
         }
         else{
-            window.alert('[ERRO] Número maximo de digitos atingido (15)')
+            window.alert('[ERRO] Número maximo de digitos atingido')
         }
     }
     

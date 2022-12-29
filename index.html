@@ -11,24 +11,30 @@
     <header>
         <h1>Calculadora</h1>
     </header>
-    <section>
-        <div class="res" id="res">0</div>
-        <div class="buttonline">
-            <button class="button" onclick="reset()">C</button><button class="button" onclick="negativo()">±</button><button class="button" onclick="number('^')">^</button><button class="button" onclick="number('/')">/</button>
-        </div> 
-        <div class="buttonline">
-            <button class="button" onclick="number(7)">7</button><button class="button" onclick="number(8)">8</button><button class="button" onclick="number(9)">9</button><button class="button" onclick="number('*')">*</button>
-        </div> 
-        <div class="buttonline">
-            <button class="button" onclick="number(4)">4</button><button class="button" onclick="number(5)">5</button><button class="button" onclick="number(6)">6</button><button class="button" onclick="number('-')">-</button>
+    <div class="box">
+        <div class="span">
+            <section class="conteiner">
+                <div class="res" > <p id="res"> 0 </p></div>
+                    <div class="conteinerbutton">
+                        <div class="buttonline">
+                            <button class="button" onclick="reset()" id="b1">C</button><button id="b2" class="button" onclick="negativo()">±</button><button id="b3" class="button" onclick="number('^')">^</button><button id="b4" class="button" onclick="number('/')">/</button>
+                        </div> 
+                        <div class="buttonline">
+                            <button id="b5" class="button" onclick="number(7)">7</button><button id="b6" class="button" onclick="number(8)">8</button><button id="b7" class="button" onclick="number(9)">9</button><button id="b8" class="button" onclick="number('*')">*</button>
+                        </div> 
+                        <div class="buttonline">
+                            <button id="b9" class="button" onclick="number(4)">4</button><button id="b10" class="button" onclick="number(5)">5</button><button id="b11" class="button" onclick="number(6)">6</button><button id="b12" class="button" onclick="number('-')">-</button>
+                        </div>
+                        <div class="buttonline">
+                            <button id="b13" class="button" onclick="number(1)">1</button><button id="b14" class="button" onclick="number(2)">2</button><button id="b15" class="button" onclick="number(3)">3</button><button id="b16" class="button" onclick="number('+')">+</button>
+                        </div>
+                        <div class="buttonline">
+                            <button id="b17" class="button" onclick="number(0)">0</button><button id="b18" class="button" onclick="number('.')">.</button><button  class="button" id="b19" onclick="result()">=</button>
+                        </div>
+                    </div>
+            </section>
         </div>
-        <div class="buttonline">
-            <button class="button" onclick="number(1)">1</button><button class="button" onclick="number(2)">2</button><button class="button" onclick="number(3)">3</button><button class="button" onclick="number('+')">+</button>
-        </div>
-        <div class="buttonline">
-            <button class="button" onclick="number(0)">0</button><button class="button" onclick="number('.')">.</button><button class="button" id="igual" onclick="result()">=</button>
-        </div>
-    </section>
+    </div>
     <footer>
         <P>&copy; JhoanDev</P>
     </footer>

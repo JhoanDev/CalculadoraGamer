@@ -1,78 +1,275 @@
-header{
+header {
     color:rgb(255, 255, 255);
     text-align: center;
 }
 
-body{
-    background-color: rgb(35, 0, 80);
+body {
+    background-color: rgb(59, 59, 59);
     font: normal 1.15em arial;
+    padding: 0em;
+    margin: 0em;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
-section{
-    background-color:  rgb(124, 124, 124);
-    border-radius: 1em;
-    width: 15em;
-    height: 20em;
-    margin: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-    border: 0.2rem solid rgb(10, 10, 10);
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.582);
 }
 
-.res{
-    font-size: 25px;
-    position: relative;
-    left: 0.3em;
-    top: 0.25em;
-    border: 0.2rem solid rgb(0, 0, 0);
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em ;
-    width: 8.27em;
-    height: 2em;
-    display: flex;
-    padding: 1em;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    color: white;
-    background-color:  rgb(24, 25, 26);
+.box::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 0, 255));
+    animation: rotate 4s linear infinite;
 }
 
-.buttonline{
-    position: relative;
-    width: 15em;
+.box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 0));
+    animation: rotate 4s linear infinite;
+    animation-delay: 2s;
+}
+
+.span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: rgb(40, 0, 104);
+    z-index: 2;
+}
+
+.conteiner {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    inset: 0px;
+    border-radius: 16px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    top: 1em;
+    flex-direction: row;
 }
 
-.button{
-    background-color:  rgba(31, 29, 29, 0.849);    
-    position: relative;
-    width: 4.9em;
-    height: 3.5em;
-    border-radius: 0.5em;
-    color: white;
+.res {
+    position: absolute;
+    bottom: 305px;
+    height: 55px;
+    width: 215px;
+    display:flex;
+    border-radius: 10px;
+    flex-direction: column;
+    padding-left: 15px;
+    justify-content: center;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.877);
+    border: 5px inset rgb(74, 124, 153);
 }
 
-.button:hover{
+.button {
+    width: 45px;
+    height: 40px;
+    display: inline-block;
+    font-size: 17px;
     cursor: pointer;
-    background-color:  rgba(63, 61, 61, 0.849);    
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #212221;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
 }
 
-button#igual{
-    width: 9.8em;
-    background-color: rgb(0, 88, 77, 0.849);
+.button:hover {background-color: rgb(48, 49, 48)}
+
+.button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
 }
-button#igual:hover{
-    
-    background-color: rgba(7, 122, 109, 0.849);
+
+.button#b1 {
+    position: absolute;
+    bottom: 250px;
+    left: 30px;
+    color: black;
+    background-color: rgb(126, 126, 126);
+    box-shadow: 0 5px rgb(36, 36, 36);
 }
+
+.button#b1:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.button#b1:active {
+    box-shadow: 0 2px rgb(36, 36, 36);
+    transform: translateY(2px);
+}
+
+.button#b2 {
+    position: absolute;
+    bottom: 250px;
+    left: 92px;
+    background-color: rgb(70, 0, 70);
+}
+
+.button#b2:hover {
+    background-color: rgb(150, 0, 150);
+}
+
+.button#b3 {
+    position: absolute;
+    bottom: 250px;
+    left: 154px;
+    background-color: rgb(134, 60, 72);
+}
+
+.button#b3:hover {
+    background-color: rgb(161, 101, 111);
+}
+
+.button#b4 {
+    position: absolute;
+    bottom: 250px;
+    left: 216px;
+    background-color: rgb(150, 150, 0);
+}
+.button#b4:hover {
+    background-color: rgb(230, 230, 0);
+}
+.button#b5 {
+    position: absolute;
+    bottom: 195px;
+    left: 30px;
+}
+
+.button#b6 {
+    position: absolute;
+    bottom: 195px;
+    left: 92px;
+}
+
+.button#b7 {
+    position: absolute;
+    bottom: 195px;
+    left: 154px;
+}
+
+.button#b8 {
+    position: absolute;
+    bottom: 195px;
+    left: 216px;
+    background-color: rgb(0, 120, 0);
+}
+
+.button#b8:hover {
+    background-color: rgb(0, 250, 0);
+}
+
+.button#b9 {
+    position: absolute;
+    bottom: 140px;
+    left: 30px;
+}
+
+.button#b10 {
+    position: absolute;
+    bottom: 140px;
+    left: 92px;
+}
+
+.button#b11 {
+    position: absolute;
+    bottom: 140px;
+    left: 154px;
+}
+
+.button#b12 {
+    position: absolute;
+    bottom: 140px;
+    left: 216px;
+    background-color: rgb(0, 0, 120);
+}
+
+.button#b12:hover {
+    background-color: rgb(0, 0, 250);
+}
+
+.button#b13 {
+    position: absolute;
+    bottom: 85px;
+    left: 30px;
+}
+
+.button#b14 {
+    position: absolute;
+    bottom: 85px;
+    left: 92px;
+}
+
+.button#b15 {
+    position: absolute;
+    bottom: 85px;
+    left: 154px;
+}
+
+.button#b16 {
+    position: absolute;
+    bottom: 85px;
+    left: 216px;
+    background-color: rgb(120, 0, 0);
+}
+
+.button#b16:hover {
+    background-color: rgb(250, 0, 0);
+}
+
+.button#b17 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.button#b18 {
+    position: absolute;
+    bottom: 30px;
+    left: 92px;
+}
+
+.button#b19 {
+    position: absolute;
+    bottom: 30px;
+    left: 154px;
+    background-color: #006142;
+    width: 107px;
+}
+.button#b19:hover {
+    background-color: #009767;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 footer{
     color: rgb(255, 255, 255);
     font-style: italic;
