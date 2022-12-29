@@ -8,6 +8,10 @@ var op = []
 var opi = 0
 var c = 0
 
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
+}
+
 function reset() {
     vetornum = []
     res.innerHTML = 0
@@ -22,34 +26,51 @@ function reset() {
 
 function number(x) {
     let n = x
-    if (vetornum.length < 15) {
-        if ((typeof(n) == 'string') && (typeof(vetornum[(vetornum.length - 1)]) == 'string')) {
-            window.alert('[ERRO] Não coloque duas operações/strings juntas!')
-        }
-        else{        
-            if (typeof(n) == 'string' && n != '.') {
-            c++
-            }
-            if (c<2) {
-                vetornum.push(n)
-                res.innerHTML = vetornum.join('')
-            }
-            else{
-                result()
-            }  
-        }
+    if (vetornum.length == 0 && typeof(n) == 'string') {
+        window.alert('[ERRO] Não pode utilizar operadores no primeiro digito, resetando...')
+        reset()
     }
     else{
-        window.alert('[ERRO] Número maximo de digitos atingido (15)')
+        if (vetornum.length < 15) {
+            if ((typeof(n) == 'string') && (typeof(vetornum[(vetornum.length - 1)]) == 'string')) {
+                window.alert('[ERRO] Não coloque duas operações/strings juntas!')
+            }
+            else{        
+                if (typeof(n) == 'string' && n != '.') {
+                c++
+                }
+                if (c<2) {
+                    vetornum.push(n)
+                    res.innerHTML = vetornum.join('')
+                }
+                else{
+                    result()
+                }  
+            }
+        }
+        else{
+            window.alert('[ERRO] Número maximo de digitos atingido (15)')
+        }
     }
+    
 }
 function negativo() {
     if (typeof(vetornum[(vetornum.length - 1)]) == 'string') {
         window.alert('[ERRO] O ultimo digito não é um número')
     }
     else{
-        vetornum[(vetornum.length - 1)] = -vetornum[(vetornum.length - 1)]
-        res.innerHTML = vetornum.join('')
+        for (let i = (vetornum.length-1); i >= 0; i--) {
+            if (((typeof(vetornum[i])) != 'number') && ((vetornum[i]) != '.')) {
+                vetornum[i+1] = -vetornum[i+1]
+                res.innerHTML = vetornum.join('')
+                break;
+            }
+            if ((i) == 0) {
+                vetornum[i] = -vetornum[i]
+                res.innerHTML = vetornum.join('')
+                break;
+            } 
+        }
     }
 }
 
@@ -129,6 +150,7 @@ function result() {
                 break;
             }
         }
+    resultado = roundToTwo(resultado)
     vetornum = [resultado]
     res.innerHTML = `${resultado} `
 }
