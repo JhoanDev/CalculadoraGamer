@@ -29,7 +29,7 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 0, 255));
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 234));
     animation: rotate 4s linear infinite;
 }
 
@@ -38,7 +38,7 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 0));
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 85));
     animation: rotate 4s linear infinite;
     animation-delay: 2s;
 }

@@ -1,6 +1,6 @@
-var vetornum = []
+var vetornum = [] 
 var res = document.getElementById('res')
-var passnumbers = ''
+var passnumbers = '' 
 var posnumbers = ''
 var resultado = ''
 var qnt = 0
@@ -8,11 +8,11 @@ var op = []
 var opi = 0
 var c = 0
 
-function roundToTwo(num) {
+function roundToTwo(num) { //função para arredondar
     return +(Math.round(num + "e+2")  + "e-2");
 }
 
-function reset() {
+function reset() { //botao Clear
     vetornum = []
     res.innerHTML = 0
     resultado = ''
@@ -54,7 +54,7 @@ function number(x) {
     }
     
 }
-function negativo() {
+function negativo() { //inverter sinal do numero
     if (typeof(vetornum[(vetornum.length - 1)]) == 'string') {
         window.alert('[ERRO] O ultimo digito não é um número')
     }
@@ -74,7 +74,7 @@ function negativo() {
     }
 }
 
-function result() {
+function result() { //fazer o calculo
     for (let i = 0; i < vetornum.length; i++) {
         switch (vetornum[i]) {
             case '^':
@@ -151,6 +151,12 @@ function result() {
             }
         }
     resultado = roundToTwo(resultado)
-    vetornum = [resultado]
-    res.innerHTML = `${resultado} `
+    if (isNaN(resultado) === true){
+        res.innerHTML = `[ERRO]`
+        vetornum = []
+    }
+    else if (isNaN(resultado) === false) {
+        vetornum = [resultado]
+        res.innerHTML = `${resultado} `
+    }
 }
