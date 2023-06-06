@@ -15,20 +15,20 @@ body {
 
 .box {
     position: relative;
-    width: 300px;
-    height: 400px;
-    border-radius: 20px;
+    width: 18.75rem;
+    height: 25rem;
+    border-radius: 1.25rem;
     display: grid;
     place-items: center;
     overflow: hidden;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.582);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.582);
 }
 
 .box::before {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
     background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 234));
     animation: rotate 4s linear infinite;
 }
@@ -36,8 +36,8 @@ body {
 .box::after {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
     background-image: conic-gradient(transparent, transparent, transparent, rgb(0, 255, 85));
     animation: rotate 4s linear infinite;
     animation-delay: 2s;
@@ -45,8 +45,8 @@ body {
 
 .span{
     position: absolute;
-    inset: 5px;
-    border-radius: 16px;
+    inset: 0.3125rem;
+    border-radius: 1rem;
     background-color: rgb(40, 0, 104);
     z-index: 2;
 }
@@ -54,8 +54,8 @@ body {
 .conteiner {
     position: absolute;
     background-color: rgb(0, 0, 0);
-    inset: 0px;
-    border-radius: 16px;
+    inset: 0rem;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,24 +64,24 @@ body {
 
 .res {
     position: absolute;
-    bottom: 305px;
-    height: 55px;
-    width: 215px;
+    bottom: 19.0625rem;
+    height: 3.4375rem;
+    width: 13.4375rem;
     display:flex;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     flex-direction: column;
-    padding-left: 15px;
+    padding-left: 0.9375rem;
     justify-content: center;
     text-align: left;
     background-color: rgba(255, 255, 255, 0.877);
-    border: 5px inset rgb(74, 124, 153);
+    border: 0.3125rem inset rgb(74, 124, 153);
 }
 
 .button {
-    width: 45px;
-    height: 40px;
+    width: 2.8125rem;
+    height: 2.5rem;
     display: inline-block;
-    font-size: 17px;
+    font-size: 1.0625rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -89,24 +89,24 @@ body {
     color: rgb(255, 255, 255);
     background-color: #212221;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 5px #999;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.3125rem #999;
 }
 
 .button:hover {background-color: rgb(48, 49, 48)}
 
 .button:active {
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
+    box-shadow: 0 0.125rem #666;
+    transform: translateY(0.125rem);
 }
 
 .button#b1 {
     position: absolute;
-    bottom: 250px;
-    left: 30px;
+    bottom: 15.625rem;
+    left: 1.875rem;
     color: black;
     background-color: rgb(126, 126, 126);
-    box-shadow: 0 5px rgb(36, 36, 36);
+    box-shadow: 0 0.3125rem rgb(36, 36, 36);
 }
 
 .button#b1:hover {
@@ -114,14 +114,14 @@ body {
 }
 
 .button#b1:active {
-    box-shadow: 0 2px rgb(36, 36, 36);
-    transform: translateY(2px);
+    box-shadow: 0 0.125rem rgb(36, 36, 36);
+    transform: translateY(0.125rem);
 }
 
 .button#b2 {
     position: absolute;
-    bottom: 250px;
-    left: 92px;
+    bottom: 15.625rem;
+    left: 5.75rem;
     background-color: rgb(70, 0, 70);
 }
 
@@ -131,8 +131,8 @@ body {
 
 .button#b3 {
     position: absolute;
-    bottom: 250px;
-    left: 154px;
+    bottom: 15.625rem;
+    left: 9.625rem;
     background-color: rgb(134, 60, 72);
 }
 
@@ -142,8 +142,8 @@ body {
 
 .button#b4 {
     position: absolute;
-    bottom: 250px;
-    left: 216px;
+    bottom: 15.625rem;
+    left: 13.5rem;
     background-color: rgb(150, 150, 0);
 }
 .button#b4:hover {
@@ -151,26 +151,26 @@ body {
 }
 .button#b5 {
     position: absolute;
-    bottom: 195px;
-    left: 30px;
+    bottom: 12.1875rem;
+    left: 1.875rem;
 }
 
 .button#b6 {
     position: absolute;
-    bottom: 195px;
-    left: 92px;
+    bottom: 12.1875rem;
+    left: 5.75rem;
 }
 
 .button#b7 {
     position: absolute;
-    bottom: 195px;
-    left: 154px;
+    bottom: 12.1875rem;
+    left: 9.625rem;
 }
 
 .button#b8 {
     position: absolute;
-    bottom: 195px;
-    left: 216px;
+    bottom: 12.1875rem;
+    left: 13.5rem;
     background-color: rgb(0, 120, 0);
 }
 
@@ -180,26 +180,26 @@ body {
 
 .button#b9 {
     position: absolute;
-    bottom: 140px;
-    left: 30px;
+    bottom: 8.75rem;
+    left: 1.875rem;
 }
 
 .button#b10 {
     position: absolute;
-    bottom: 140px;
-    left: 92px;
+    bottom: 8.75rem;
+    left: 5.75rem;
 }
 
 .button#b11 {
     position: absolute;
-    bottom: 140px;
-    left: 154px;
+    bottom: 8.75rem;
+    left: 9.625rem;
 }
 
 .button#b12 {
     position: absolute;
-    bottom: 140px;
-    left: 216px;
+    bottom: 8.75rem;
+    left: 13.5rem;
     background-color: rgb(0, 0, 120);
 }
 
@@ -209,26 +209,26 @@ body {
 
 .button#b13 {
     position: absolute;
-    bottom: 85px;
-    left: 30px;
+    bottom: 5.3125rem;
+    left: 1.875rem;
 }
 
 .button#b14 {
     position: absolute;
-    bottom: 85px;
-    left: 92px;
+    bottom: 5.3125rem;
+    left: 5.75rem;
 }
 
 .button#b15 {
     position: absolute;
-    bottom: 85px;
-    left: 154px;
+    bottom: 5.3125rem;
+    left: 9.625rem;
 }
 
 .button#b16 {
     position: absolute;
-    bottom: 85px;
-    left: 216px;
+    bottom: 5.3125rem;
+    left: 13.5rem;
     background-color: rgb(120, 0, 0);
 }
 
@@ -238,22 +238,22 @@ body {
 
 .button#b17 {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 1.875rem;
+    left: 1.875rem;
 }
 
 .button#b18 {
     position: absolute;
-    bottom: 30px;
-    left: 92px;
+    bottom: 1.875rem;
+    left: 5.75rem;
 }
 
 .button#b19 {
     position: absolute;
-    bottom: 30px;
-    left: 154px;
+    bottom: 1.875rem;
+    left: 9.625rem;
     background-color: #006142;
-    width: 107px;
+    width: 6.6875rem;
 }
 .button#b19:hover {
     background-color: #009767;
